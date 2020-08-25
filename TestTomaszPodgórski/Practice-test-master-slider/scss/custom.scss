@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-family: Gothic A1;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
+  color: #000000;
+}
+
+h2{
+  font-family: Gothic A1;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+p{
+  font-family: Gothic A1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+section{
+  display: flex;
+  background: #fff;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  .content{
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    padding-top: 20px;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+    .wrapper-up-text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .up-text{
+      max-width: 445px;
+      padding-left: 53px;
+      @media only screen and (max-width: 767px) {
+        padding: 0 10px;
+      }
+      h1{
+        margin-bottom: 28px;
+      }
+      p{
+        margin-bottom: 60px;
+      }
+    }
+    .wrapper-down-text{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .down-text{
+      max-width: 190px;
+      padding-left: 56px;
+      @media only screen and (max-width: 767px) {
+        padding: 0 10px;
+        margin-bottom: 15px;
+      }
+      h2{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      p{
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+      }
+    }
+  }
+  .image{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1200px) {
+      padding: 0 10px;
+    }
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      padding: 0;
+    }
+    img{
+      max-width: 555px;
+      height: 400px;
+      width: 100%;
+      @media only screen and (max-width: 767px) {
+       max-width: 100%;
+      }
+    }
+  }
+}
+
+
+
+/* SLIDER STYLES */
+
+
+
+.slideshow-container {
+  max-width: 555px;
+  position: relative;
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+.dots{
+  max-width: 555px;
+  @media only screen and (max-width: 767px) {
+    max-width: 100%;
+  }
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  background: #C4C4C4;
+  font-size: 12px;
+  padding: 10px 10px;
+  position: absolute;
+  bottom: 4px;
+  right: 0;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
